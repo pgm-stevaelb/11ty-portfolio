@@ -1,10 +1,12 @@
 ---
 items:
-  - text: Menu One
+  - text: Home
     url: "#"
-  - text: Menu Two
+  - text: About me
     url: "#"
-  - text: Menu Three
+  - text: Services
     url: "#"
-  - text: Blog
+  - text: Portfolio
+    url: "#"
+  - text: ☕ Contact
     url: "/blog"
