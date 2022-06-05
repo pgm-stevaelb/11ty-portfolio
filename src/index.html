@@ -4,13 +4,30 @@ title: Portfolio
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
+<main id="home" class="home container">
+	<section class="full-width m-bot-xxl">
+		<h1 class="m-bot-l">👋 My name is <span class="text-underline transition">Steven</span></h1>
+		<div class="m-bot-m">
+			<p>I'm a <span class="text-bold" id="services"></span></p>
+			<p>located in <span class="text-bold">Sint-Niklaas, Belgium <img src="/static/img/be.svg" alt="Belgium baby!" class="icon-s"></span></p>
+		</div>
+	</section>
 
-  {% include "./_includes/partials/content.html" %}
-</div>
+	<section id="bottom-nav" class="nav__btns m-bot-xxl">
+		<a href="/about.html" class="btn btn-pri">Get to know me</a>
+		<a href="/services.html" class="btn btn-pri">What do I offer</a>
+		<a href="/portfolio.html" class="btn btn-pri">Check my work</a>
+		<a href="/contact.html" class="btn btn-sec"><span class="m-right-xs">☕</span> Get in contact</a>
+	</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script>
+	const typed = new Typed('#services', {
+		strings: ['web developer', 'WordPress builder', 'UI/UX designer', 'graphic designer', 'front-end developer'],
+		typeSpeed: 60,
+		backSpeed: 30,
+		backDelay: 1200,
+		loop: true
+	});
+</script>

@@ -13,11 +13,10 @@
 	{% endif %}
 	{% block head %}{% endblock %}
 	<!-- CSS -->
-	<link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="stylesheet" href="assets/css/fonts.css">
-	<link rel="stylesheet" href="assets/css/pages.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	<link rel="stylesheet" href="/static/css/reset.css">
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link rel="stylesheet" href="/static/css/fonts.css">
+	<link rel="stylesheet" href="/static/css/pages.css">
 	{% if prism == true %}
 	<link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
 	<!-- Tooltip CDN CSS -->
@@ -30,14 +29,13 @@
 
 	{{ content | safe }}
 
-	{% include "./partials/footer.html" %}
-
 	<script src="/static/js/alpine.js"></script>
 
 	{% if path == "home" %}
 	<!-- Netlify Identity Widget -->
 	<!-- Needed only if you are using Netlify Identity feature -->
 	<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<script src="/static/js/scripts.js"></script>
 	{% endif %}
 
 </body>
