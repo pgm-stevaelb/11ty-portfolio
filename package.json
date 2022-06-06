@@ -1,4 +1,7 @@
 {
+	"name": "personal-portfolio",
+	"version": "1.0.0",
+	"description": "Personal portfolio from Steven Aelbrecht.",
   "scripts": {
     "start": "npm-run-all --parallel eleventy browsersync",
     "eleventy": "eleventy --watch",
