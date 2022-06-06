@@ -40,8 +40,16 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Short Description", name: "short-desc", widget: "string" }
       - { label: "Long Description", name: "long-desc", widget: "markdown"}
-      - { label: "Category" }
-      - { label: "Technology" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        multiple: false
+        options: ["Front-end", "Back-end", "WordPress"]
+      - label: "Technologies"
+        name: "technology"
+        widget: "select"
+        multiple: true
+        options: ["HTML", "CSS", "JS", "Node", "WordPress", "Oxygen Builder", "Elementor Pro", "Meta Box", "WooCommerce"]
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
@@ -49,16 +57,17 @@ collections:
         default: "/uploads/chocolate-dogecoin.jpg"
         media_library:
           config:
+            multiple: false
+      - label: "Gallery"
+        name: "gallery"
+        widget: "image"
+        choose_url: true
+        default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
             multiple: true
-      - { label: "Gallery" }
-      - { label: "Live Link" }
-      - { label: "Github Link" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
+      - { label: "Live Link", name: "live", widget: "string" }
+      - { label: "Github Link", name: "github", widget: "string" }
   - label: "Settings"
     name: "settings"
     editor:
