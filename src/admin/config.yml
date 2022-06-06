@@ -30,6 +30,35 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+  - label: "Projects"
+    name: "project"
+    folder: "src/projects"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short Description", name: "short-desc", widget: "string" }
+      - { label: "Long Description", name: "long-desc", widget: "markdown"}
+      - { label: "Category" }
+      - { label: "Technology" }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
+      - { label: "Gallery" }
+      - { label: "Live Link" }
+      - { label: "Github Link" }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["Tags", "created", "from", "config.yml"]
   - label: "Settings"
     name: "settings"
     editor:
