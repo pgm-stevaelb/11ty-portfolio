@@ -1,0 +1,29 @@
+---
+title: Projects
+layout: default
+---
+
+<main id="portfolio-details" class="container">
+
+	<div class="m-bot-m"><a href="/">⬅ Back to overview</a></div>
+
+	<section class="portfolio-details max-100">
+
+		{{ content | safe }}
+
+	</section>
+
+	<div><a href="/">⬅ Back to overview</a></div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		new Splide('#project-gallery', {
+			type: 'loop',
+			autoplay: true,
+			interval: 5000
+		}).mount();
+	});
+</script>
